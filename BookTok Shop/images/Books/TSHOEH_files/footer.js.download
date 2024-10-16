@@ -1,0 +1,108 @@
+function footerActions() {
+	console.log("init footer validation");
+	
+	// drawers
+	$(".ft-drawer-name").on("click",function() {
+		if (window.innerWidth < 768) {
+			var thisLabel = $(this);
+			$(this).siblings(".ft-drawer-contents").slideToggle({
+				duration: 150,
+   				start: function(){
+   					if ( thisLabel.hasClass("toggled-off") ) {
+   						thisLabel.removeClass("toggled-off").addClass("toggled-on");
+   					} else {
+   						thisLabel.removeClass("toggled-on").addClass("toggled-off");
+   					}
+   				}
+			});
+		}
+	});
+	
+	// forms
+	$(".ft-forms .text-input input[type='text']").on("focus", function() {
+		$(this).siblings("label").addClass("focused");
+	});
+	$(".ft-forms .text-input input[type='text']").on("blur", function() {
+		if ( $(this).val() == '' ) {
+			$(this).siblings("label").removeClass("focused");
+		}
+	});
+	
+
+	//DOM manipulation for link drawers
+	/* if (window.innerWidth > 1023) {
+		$(".dr-shipping").detach();
+	} else {
+		$(".dr-shop").detach();
+		$(".m-rm").detach();
+	}
+    */
+
+
+	// analytics for links
+	$(".ft-promo-link a, .ft-drawer-contents a, .ft-legal a").on("click",function(e) {
+		var tkHead = $(this).attr("data-tkhead");
+		var tkName = $(this).text().trim();
+
+		_satellite.track('onNavigationClick', {
+			eventInfo: {
+				eventName: 'Navigation Click', // Fixed
+				eventAction: 'navigationClick', // Fixed
+				timeStamp: new Date() // Fixed
+			},
+			attributes: {
+				header: tkHead, // B&N Services, About Us, Quick Help
+				name: tkName, // i.e. Customer Service, Order Status
+				location: 'Footer' // Footer, Header
+			},
+			category: {
+				primaryCategory: 'Navigation'
+			}
+		});
+		console.log("track: " + tkHead + " | " + tkName);
+	});
+
+	// analytics for social icons
+	$(".social-icons a").on("click",function(e) {
+		var tkName = $(this).text().trim();
+		_satellite.track('onSocialNetworkIconClick', {
+			eventInfo: {
+				eventName: 'Social Network Icon Click', // Fixed
+				eventAction: 'socialNetworkIconClick', // Fixed
+				timeStamp: new Date() // Fixed
+			},
+			attributes: {
+				networkName: '' // {String: network name, i.e. Facebook, Twitter}
+			},
+			category: {
+				primaryCategory: 'User'
+			}
+		});
+		console.log("track: " + tkName);
+	});
+
+    /* remove member rewards sign-up link for current rewards and premium members */
+    setTimeout(() => {
+        if (typeof digitalData !== "undefined") {
+            const currentUserTermType = digitalData.user[0].profile[0].profileInfo.membershipTermType;
+            console.log("TERMTYPE: " + currentUserTermType);
+            const rewardsTermTypes = ["16", "17", "18", "19"];
+            console.log("digitalData is present");
+            if (rewardsTermTypes.includes(currentUserTermType)) {
+                document.getElementById("rewards-modal-footer-signup").remove();
+                console.log("Sign-Up Now removal has happened");
+            }
+        } else {
+            console.log("No valid digitalData to use");
+        }
+    }, 1000);
+
+    /* keep copyright year current */
+    document.getElementById("cur-year").innerHTML = new Date().getFullYear();
+
+}
+
+// email submission fix
+setTimeout(function(){
+    $(".text-input--email-signup #emailSignup").off('blur');
+}, 1000);

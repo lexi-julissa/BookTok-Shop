@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Edit</title>
+
+    <link rel="icon" type="image/x-icon" href="/images/admin.png">
+
+    <link rel="stylesheet" href="./style.css" type="text/css"/>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header id="header">
+
+        <a href="index.html"><img  src="/images/logo3.png" alt="#BookTok Shop Logo"></a>
+        <p style="font-size: 30px;"><i>Admin Home</i></p>
+
+    </header>
+    <nav id="nav">
+        <Button onclick="navigateTo('adminHome.html')" class="nav-buttons">Home</Button> 
+        <button onclick="navigateTo('bulkUpload.html')" class="nav-buttons">Bulk Upload</button>
+        <Button onclick="navigateTo('productEdit.html')" class="nav-buttons">Product Edit</Button>
+    </nav>
+    <div class="content-container">
+        <div class="article-container">
+            <!-- Container for the three sections -->
+            <div class="container2">
+                <div class="article2">
+                    <h2>ID: 01</h2><br><hr>
+                    <label for="itemImage"><b>Current Image:</b></label><br>
+                    <img src="/images/Books/TBDINE.webp" class="book-admin"><br>
+                    
+                    <br><br><label for="changeImage"><b>Change Image:</b></label>
+                    <button class="nav-buttons" onclick="document.getElementById('fileInput').click()">Select File</button>
+                <!-- Hidden file input -->
+                <input type="file" id="fileInput" name="fileInput" accept=".csv, .xml, .txt, .json">
+                <br>
+
+                    <br><label for="itemName"><b>Item Name</b></label>
+                    <input type="text" class="input-field" placeholder="They Both Die At The End" name="itemName" />
+                    <br />
+
+                    <br><br><label for="itemName"><b>Author</b></label>
+                    <input type="text" class="input-field" placeholder="Adam Silvera" name="itemAuthor" />
+                    <br />
+
+                    <br><br><label for="itemPrice"><b>Rating</b></label>
+                    <input type="number" class="input-field" placeholder="5" name="itemRating" />
+                    <br />
+
+                    <br><br><label for="itemCategory"><b>Genre</b></label>
+                    <input type="text" class="input-field" placeholder="Young Adult Fiction" name="itemCategory" />
+                    <br />
+
+                    <br><br><label for="itemPrice"><b>Price</b></label>
+                    <input type="number" class="input-field" placeholder="$15.00" name="itemPrice" />
+                    <br />
+
+                    <br><br><label for="itemDescription"><b>Description</b></label>
+                    <input type="text" class="input-field" placeholder="As Mateo and Rufus navigate their last day alive..." name="itemDescription" />
+                    <br />
+
+                    <button class="nav-buttons myButton">Save Changes</button>
+                    <span id="displayText"></span>
+
+                </div>
+                <div class="article2">
+                    <h2>ID: 02</h2><br><hr>
+                    <label for="itemImage"><b>Current Image:</b></label><br>
+                    <img src="/images/Books/TSITP.webp" class="book-admin"><br>
+                    
+                    <br><br><label for="changeImage"><b>Change Image:</b></label>
+                    <button class="nav-buttons" onclick="document.getElementById('fileInput').click()">Select File</button>
+                <!-- Hidden file input -->
+                <input type="file" id="fileInput" name="fileInput" accept=".csv, .xml, .txt, .json">
+                <br>
+
+                    <br><label for="itemName"><b>Item Name</b></label>
+                    <input type="text" class="input-field" placeholder="The Summer I Turned Pretty" name="itemName" />
+                    <br />
+
+                    <br><br><label for="itemName"><b>Author</b></label>
+                    <input type="text" class="input-field" placeholder="Jenny Han" name="itemAuthor" />
+                    <br />
+
+                    <br><br><label for="itemPrice"><b>Rating</b></label>
+                    <input type="number" class="input-field" placeholder="4.5" name="itemRating" />
+                    <br />
+
+                    <br><br><label for="itemCategory"><b>Genre</b></label>
+                    <input type="text" class="input-field" placeholder="Romance" name="itemCategory" />
+                    <br />
+
+                    <br><br><label for="itemPrice"><b>Price</b></label>
+                    <input type="number" class="input-field" placeholder="$11.99" name="itemPrice" />
+                    <br />
+
+                    <br><br><label for="itemDescription"><b>Description</b></label>
+                    <input type="text" class="input-field" placeholder="A girl is caught in a love triangle..." name="itemDescription" />
+                    <br />
+
+                    <button class="nav-buttons myButton">Save Changes</button>
+                    <span id="displayText"></span>
+
+                </div>
+                <div class="article2">
+                    <h2>ID: 03</h2><br><hr>
+                    <label for="itemImage"><b>Current Image:</b></label><br>
+                    <img src="/images/Books/NP.webp" class="book-admin"><br>
+                    
+                    <br><br><label for="changeImage"><b>Change Image:</b></label>
+                    <button class="nav-buttons" onclick="document.getElementById('fileInput').click()">Select File</button>
+                <!-- Hidden file input -->
+                <input type="file" id="fileInput" name="fileInput" accept=".csv, .xml, .txt, .json">
+                <br>
+
+                    <br><label for="itemName"><b>Item Name</b></label>
+                    <input type="text" class="input-field" placeholder="Normal People" name="itemName" />
+                    <br />
+
+                    <br><br><label for="itemName"><b>Author</b></label>
+                    <input type="text" class="input-field" placeholder="Sally Rooney" name="itemAuthor" />
+                    <br />
+
+                    <br><br><label for="itemPrice"><b>Rating</b></label>
+                    <input type="number" class="input-field" placeholder="3.8" name="itemRating" />
+                    <br />
+
+                    <br><br><label for="itemCategory"><b>Genre</b></label>
+                    <input type="text" class="input-field" placeholder="#BookTok favorites" name="itemCategory" />
+                    <br />
+
+                    <br><br><label for="itemPrice"><b>Price</b></label>
+                    <input type="number" class="input-field" placeholder="$8.72" name="itemPrice" />
+                    <br />
+
+                    <br><br><label for="itemDescription"><b>Description</b></label>
+                    <input type="text" class="input-field" placeholder="Diving into the lives of two young adults..." name="itemDescription" />
+                    <br />
+
+                    <button class="nav-buttons myButton">Save Changes</button>
+                    <span id="displayText"></span>
+
+                </div>
+            </div>
+            <div class="article" style="text-align: center;">
+                <button class="nav-buttons">Add a New Product</button>
+            </div>
+        </div>
+    </div>
+   
+    <footer id="footer"><p>Alexia Cervantes<br> <i>Univerity of Nevada, Reno</p></i></footer>
+</body>
+</html>

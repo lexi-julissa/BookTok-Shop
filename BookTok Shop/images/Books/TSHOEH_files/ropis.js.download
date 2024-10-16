@@ -1,0 +1,2 @@
+/*! BARNES-BUILDER 2024-02-21 */
+$(document).on("click","#openReserveModal",function(){var a=$("#productSkuId").val(),b=$("#eligibleMessageUpdated").val(),c={useCache:!1,tplParams:{ean:a,bopisEligibleMessage:b}};new BN.Modal.Ropis.Base(null,{target:this},c);var d="reserve-for-store-modal";getAnalyticsRopis(d)});

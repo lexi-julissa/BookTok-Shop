@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link rel="icon" type="image/x-icon" href="/images/Book-icon.png">
+
+    <link rel="stylesheet" href="./style.css" type="text/css"/>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header id="header">
+
+        <a href="index.html"><img  src="/images/logo3.png" alt="#BookTok Shop Logo"></a>
+        <p style="font-size: 15px;"><i>Beyond the Scroll: Where booktok meets bookshelf</i></p>
+
+    </header>
+    <nav id="nav">
+        
+        <Button onclick="navigateTo('products.html')" class="nav-buttons">Shop Books</Button> 
+        <button onclick="navigateTo('about.html')" class="nav-buttons">About Us</button>
+        <Button onclick="navigateTo('reviews.html')" class="nav-buttons">Reviews</Button>
+        <Button onclick="navigateTo('news.html')" class="nav-buttons">News</Button>
+        <Button onclick="navigateTo('faq.html')" class="nav-buttons">FAQ</Button>
+        <button onclick="navigateTo('contact.html')" class="nav-buttons">Contact Us</button>
+        <button onclick="navigateTo('cart.html')" class="nav-buttons">🛒</button>
+        
+    </nav>
+    
+
+    <section class="titles"> 
+        <img class="plant" src="images/plant.webp" alt="plant">
+        <p>Shoping Cart</p>
+        <img class="plant" src="images/plant.webp" alt="plant">
+    </section>
+    <div class="details-container">
+        <div class="article-container">
+            <div class="details-article">
+                <main class="cart-box">
+                    <section id="cart-items">
+                        <div class="item">
+                            <div class="item-details">
+                                <h1>Items Selected</h1>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="books-feat" src="/images/Books/TML.webp" alt="Item 1">
+                            <div class="item-details">
+                                <h2>The Midnight Library</h2>
+                                <p id="price-1">$10</p>
+                                <div class="quantity-container">
+                                    <input type="number" value="1" min="1" onchange="updateTotal(1)" id="quantity-1">
+                                    <label for="quantity">Qty</label>
+                                </div>
+                                <p>Total: $<span id="total-1">10.00</span></p>
+                                <button class="nav-buttons">Remove</button>
+                                
+                                <br>
+                            </div>
+                        </div>                        
+                        <div class="item">
+                            <img class="books-feat" src="/images/Books/TBDINE.webp" alt="Item 2">
+                            <div class="item-details">
+                                <h2>They Both Die at the End</h2>
+                                <p id="price-2">$15</p>
+                                <div class="quantity-container">
+                                    <input type="number" value="1" min="1" onchange="updateTotal(2)" id="quantity-2">
+                                    <label for="quantity">Qty</label>
+                                </div>
+                                <p>Total: $<span id="total-2">15.00</span></p>
+                                <button class="nav-buttons">Remove</button>
+
+                                <hr>
+                            </div>
+                        </div>                        
+                    </section>
+                    <section id="cart-summary">
+                        <hr>
+                        <h2>Cart Summary</h2>
+                        <p>Total Items: <span id="total-items">2</span></p>
+                        <p>Subtotal: <span id="subtotal">25.00</span></p>
+                        <p>Tax (8%): <span id="tax">2.00</span></p>
+                        <p>Shipping: <span id="shipping">10.00</span></p>
+                        <h3>Total: $<span id="total">37.00</span></h3>
+
+                        <button class="nav-buttons">Checkout</button>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+<footer id="footer"><p>Alexia Cervantes<br> <i>Univerity of Nevada, Reno</p></i></footer>
+</body>
+</html>

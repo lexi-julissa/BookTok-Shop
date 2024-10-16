@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#BookTok Shop</title>
+    <link rel="icon" type="image/x-icon" href="/images/Book-icon.png">
+
+    <link rel="stylesheet" href="./style.css" type="text/css"/>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Modal -->
+<div id="greetingModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="dynamic-greeting"></p>
+    </div>
+</div>
+
+    <header id="header">
+
+        <a href="index.html"><img  src="/images/logo3.png" alt="#BookTok Shop Logo"></a>
+        <p style="font-size: 15px;"><i>Beyond the Scroll: Where booktok meets bookshelf</i></p>
+
+    </header>
+    <nav id="nav">
+        
+        <Button onclick="navigateTo('products.html')" class="nav-buttons">Shop Books</Button> 
+        <button onclick="navigateTo('about.html')" class="nav-buttons">About Us</button>
+        <Button onclick="navigateTo('reviews.html')" class="nav-buttons">Reviews</Button>
+        <Button onclick="navigateTo('news.html')" class="nav-buttons">News</Button>
+        <Button onclick="navigateTo('faq.html')" class="nav-buttons">FAQ</Button>
+        <button onclick="navigateTo('contact.html')" class="nav-buttons">Contact Us</button>
+        <button onclick="navigateTo('cart.html')" class="nav-buttons">🛒</button>
+
+    </nav>
+    <div class="hero-header">
+        <h1>Spring Sale!</h1>
+        <p>20% off all books</p>
+        <button onclick="navigateTo('products.html')" class="cta-button">Shop Now</button>
+    </div>
+
+    <div class="content-container">
+        <div class="article-container">
+            <div class="article">
+                <h2>Featured Sections</h2>
+                    <h3 class="h3">#BookTok Favorites</h3>  
+                        <section style="text-align: center;">
+                            <p><b>Our Beloved Bestsellers: </b>Dive into the books that have captured the hearts of readers around the globe. 
+                                From spellbinding stories to transformative non-fiction, these are the reads that everyone's talking about. 
+                                Discover your next favorite book today.</p>
+                            <div class="book-genre-container">
+                                <img class="books-feat" src="/images/books/AGGGTM.webp" alt="They Both Die In the End">
+                            </div>
+                            <div class="book-genre-container">
+                                <img class="books-feat" src="/images/books/NP.webp" alt="Six of Crows">
+                            </div>
+                            <div class="book-genre-container">
+                                <img class="books-feat" src="/images/books/Verity.webp" alt="Red White and Royal Blue">
+                            </div>
+                            <div class="book-genre-container">
+                                <img class="books-feat" src="/images/books/IHHBWM.webp" alt="The Seven Husbands Of Evelyn Hugo">
+                            </div>
+                            <div class="book-genre-container">
+                                <img class="books-feat" src="/images/books/TIG.webp" alt="The Seven Husbands Of Evelyn Hugo">
+                            </div>
+                            <div class="book-genre-container">
+                                <img class="books-feat" src="/images/books/TML.webp" alt="The Seven Husbands Of Evelyn Hugo">
+                            </div>
+                            <br><button onclick="window.location.href='products.html#fav';" class= "nav-buttons">View More</button>
+                        </section>                    
+                        
+                        <h3 class="h3">Genre Catagories</h3>
+                        <p style="text-align: center;"><b>Our Mix of Genres: </b>The books that become popular on BookTok vary over time as new titles are released and discovered by the community. 
+                            However, as of my last update in April 2023, here are some books and series that have gained popularity on BookTok, 
+                            spanning various genres from young adult fiction to fantasy and romance</p>
+                    <section style="text-align: center;">
+                        <div class="book-genre-container">
+                            <img class="books-feat" src="/images/books/TBDINE.webp" alt="They Both Die In the End">
+                            <br><button onclick="window.location.href='products.html#YAF';" class="nav-buttons">Young Adult Fiction</button>
+                        </div>
+                        <div class="book-genre-container">
+                            <img class="books-feat" src="/images/books/SOC.jpg" alt="Six of Crows">
+                            <br><button onclick="window.location.href='products.html#Fantasy';" class="nav-buttons">Fantasy</button>
+                        </div>
+                        <div class="book-genre-container">
+                            <img class="books-feat" src="/images/books/RWARB.webp" alt="Red White and Royal Blue">
+                            <br><button onclick="window.location.href='products.html#Romance';" class="nav-buttons">Romance</button>
+                        </div>
+                        <div class="book-genre-container">
+                            <img class="books-feat" src="/images/books/TSHOEH.jpg" alt="The Seven Husbands Of Evelyn Hugo">
+                            <br><button onclick="window.location.href='products.html#Misc';" class="nav-buttons">Miscellaneous</button>
+                        </div>
+                        
+                    </section>
+                    
+                </div>
+           
+                <div class="article">
+                    <h2>What is BookTok?</h2>
+                    <p>BookTok is a community on the social media platform TikTok dedicated to discussing and recommending books.
+                        This global phenomenon has redefined how we discover and fall in love with books, bringing hidden gems and 
+                        timeless classics back into the spotlight. BookTok isn't just about recommendations; it's a celebration of 
+                        stories that move us, challenge us, and connect us in unexpected ways.
+                    </p>
+                    <h2>Who are we?</h2>
+                    <p>We are a small online bookstore who sell books primarily to the BookTok community. 
+                        We keep up with the trends and popular books that are talked about on booktok. 
+                        Our goal is simple: to connect avid readers with the books that have won over millions online.
+                         We carefully select each title, from thrilling escapades to profound revelations, ensuring 
+                         there's always a book in our collection that resonates with you personally.
+                        What distinguishes us is our dedication not merely to tracking down trending reads, 
+                        but to nurturing a community of book enthusiasts who motivate and uphold one another. 
+                        Whether your'e well-versed in the BookTok realm or just embarking on your literary adventure, 
+                        we're committed to delivering the enchantment of books directly to your hands.</p>
+                        <section style="text-align: right;"> <button class="nav-buttons">Read More</button></section>
+                </div>
+
+            <div class="article">
+                <h2> Book Reviews</h2>
+                <h3 class="h3">"Where the Crawdads Sing" by Delia Owens</h3>
+                <img class="books-feat" src="/images/books/WTCS.jpg" alt="The Song of Achilles">
+                <ul>
+                    <li><b>Genre:</b> Mystery, Coming of Age</li>
+                    <li><b>Description:</b> A mesmerizing tale of solitude, survival, 
+                        and the dep mystery of the marsh. 
+                        Celebrated for its beautiful prose and intricate plot.</li>
+                    <li><b>Review:</b> ⭐⭐⭐⭐⭐ "A masterpeice that blends nature's 
+                        untamed beauty with a poingnant human story."-NatureLover75</li>
+                </ul>
+                <h3 class="h3">"The Song of Achilles" by Madeline Miller</h3>
+                <img class="books-feat" src="/images/books/TSOA.jpg" alt="The Song of Achilles">
+                <ul>
+                    <li><b>Genre:</b> Fiction, Historical fiction, Mythology</li>
+                    <li><b>Description:</b> An epic tale of love, friendship, 
+                        and destiny set against the backdrop of ancient Greece.</li>
+                    <li><b>Review:</b> ⭐⭐⭐⭐⭐ "Love this site so much!! 
+                        I ordered 5 books and they shipped so quickly. 
+                        I especially loved this book, "The Song of Achilles"!! 
+                        It is a beautifully crafted narrivative that explores the 
+                        complexities of love and honor, it left a long lasting impact on me."-MythicLover23</li>
+                </ul>
+                <section style="text-align: right;"> <button class="nav-buttons">View More</button></section>
+               
+                
+            </div>
+        </div>
+        <div class="aside-container">
+            <aside class="aside">
+                <h2 style="text-align:center;" >Sign In</h2>
+
+                    <form id="loginForm" onsubmit="signIn(event)">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button class="nav-buttons" type="submit">Sign In</button>
+                    </form>
+        <p id="message"></p>
+
+            </aside>
+
+            <aside class="aside">
+                <h2 style="text-align:center;" >Socials</h2>
+                <h3 class="h3">Follow us:</h3> 
+                
+                <a href="https://www.tiktok.com" target="_blank"><img  src="/images/socials/tiktok.png" alt="Tiktok Logo"></a>
+                <a href="https://www.twitter.com" target="_blank"><img  src="/images/socials/twitter.png" alt="Twitter Logo"></a>
+                <a href="https://www.instagram.com" target="_blank"><img  src="/images/socials/instagram.png" alt="Instagram Logo"></a>
+            </aside>
+
+            <aside class="aside">
+                <h2 style="text-align:center;" >Book Reccomendation</h2>
+                <!--<img class="books" src="/images/books/TSITP.webp" alt="#BookTok Shop Logo">-->
+                <div id="image-container"></div>
+                <button onclick="generateRandomImage()" class="rand-button">Randomize</button>
+                
+            </aside> 
+            
+            <aside class="aside">
+                <h2 style="text-align:center;" >Newsletter</h2>
+                <h3 class="h3">#BookTok shop has a newsletter!</h3> 
+                <p><b>Join Our #BookTok Community!</b></p>
+                <p>Get ready to dive into a world of books with our exclusive newsletter. By signing up, you'll receive:</p>
+                <ul style="text-align: left;">
+                    <li><b>Early Bird Notices: </b>Be the first to know about new arrivals and upcoming releases.</li>
+                    <br><li><b>Exclusive Discounts: </b>Enjoy subscriber-only discounts and special offers</li>
+                    <br><li><b>BookTok Picks:</b> Discover what's trending on BookTok and find your next great read.</li>
+                    <br><li><b>Engaging Content:</b> From author interviews to in-depth book reviews, get insights directly to your inbox.</li>
+                </ul>
+                <p>We promise to keep your inbox happy and your email address safe. Expect our curated content once a month—no spam, just love for books.</p>
+                <button class="nav-buttons">Subscribe Now</button>
+            </aside>
+        </div>
+    </div>
+    <footer id="footer"><p>Alexia Cervantes<br> <i>Univerity of Nevada, Reno</p></i></footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Upload</title>
+
+    <link rel="icon" type="image/x-icon" href="/images/admin.png">
+
+    <link rel="stylesheet" href="./style.css" type="text/css"/>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header id="header">
+
+        <a href="index.html"><img  src="/images/logo3.png" alt="#BookTok Shop Logo"></a>
+        <p style="font-size: 30px;"><i>Admin Home</i></p>
+
+    </header>
+    <nav id="nav">
+        <Button onclick="navigateTo('adminHome.html')" class="nav-buttons">Home</Button> 
+        <button onclick="navigateTo('bulkUpload.html')" class="nav-buttons">Bulk Upload</button>
+        <Button onclick="navigateTo('productEdit.html')" class="nav-buttons">Product Edit</Button>
+    </nav>
+    <div class="content-container">
+        <div class="article-container">
+            <div class="article" style="text-align: center;">
+                <h3>Download #BookTok Shop Product Data</h3>
+                <button class="rand-button">Download Now</button>
+            </div>
+            <div class="article" style="text-align: center;">
+                <h3>Upload a File</h3>
+                <p>Upload a CSV, XML, Text, or JSON file:</p>
+                <!-- Styled "Select File" button -->
+                <button class="nav-buttons" onclick="document.getElementById('fileInput').click()">Select File</button>
+                <!-- Hidden file input -->
+                <input type="file" id="fileInput" name="fileInput" accept=".csv, .xml, .txt, .json">
+                <br>
+                <button type="submit" class="nav-buttons">Upload</button>
+                
+            </div>
+        </div>
+    </div>
+    <footer id="footer"><p>Alexia Cervantes<br> <i>Univerity of Nevada, Reno</p></i></footer>
+</body>
+</html>
